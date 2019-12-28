@@ -1,6 +1,4 @@
 # README
-
-
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -10,23 +8,24 @@
 ### Association
 - has_many :chats
 - has_many :groups, through: :groups_users
+- has_many :groups_users
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
-|user_id|integer|null: false|
+|name|string|null: false|
 ### Association
 - has_many :chats
 - has_many :users, through: :groups_users
+- has_many :groups_users
 
 ## chatテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
-|message|string|null: false|
-|user_id|integer|null: false|
-|chat_id|integer|null: false|
+|message|string||
+|user_id|integer|null: false, foreign_key: true|
+|chat_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
