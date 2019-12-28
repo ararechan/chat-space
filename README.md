@@ -4,7 +4,7 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|index: true, foreign_key: true|
+|username|string|index: true, null: false|
 ### Association
 - has_many :chats
 - has_many :groups, through: :groups_users
