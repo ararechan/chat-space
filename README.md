@@ -8,8 +8,8 @@
 |password|string|null: false|
 |username|string|null: false|
 ### Association
-- has_many :chat
-- has_many :group, through: :groups_users
+- has_many :chats
+- has_many :groups, through: :groups_users
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -17,8 +17,8 @@
 |groupname|string|null: false|
 |user_id|integer|null: false|
 ### Association
-- has_many :chat
-- has_many :user, through: :groups_users
+- has_many :chats
+- has_many :users, through: :groups_users
 
 ## chatテーブル
 |Column|Type|Options|
