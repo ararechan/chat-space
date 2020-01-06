@@ -1,0 +1,36 @@
+.chat
+  .header
+    .left-header
+      .title
+        test
+      .members
+        Member:
+        .member
+        masa
+    .right-header
+      Edit
+  .messages
+    .message
+      .upper-message
+        .user-name
+          masa
+        .date
+          2019/11/20(Wed)17:43:01
+      .lower-message
+        おはよう！
+    .message
+      .upper-message
+        .user-name
+          masa
+        .date
+          2019/11/20(Wed)17:43:34
+      .lower-message
+        今日は朝から雨
+  .form
+    .new-message
+      .input-box
+        %input{type: "text",class: "input-box__texts",placeholder:"type a message"}
+        %label{class: "input-box__image"}
+          = icon('far', 'image')
+          %input{type: "file",class: "input-box__image__file"}
+      %input{type: "submit",name: "commit",value: "Send",class: "submit-btn"}
