@@ -29,7 +29,7 @@
           width: 60px;
           display: flex;
           justify-content: flex-end;
-          &--list{
+          &__list{
           }       
           a {
             text-decoration: none;
@@ -39,25 +39,27 @@
       .icons {
         color: #ffffff;
         margin-right: 5px;
-        &__edit{
+        &__edit {
         }
-        &__cog{
+        &__cog {
         }
       }
     } 
       
-    .groups{
-      color: #ffffff;
+    .groups {
       height: calc(100vh - 100px);
       background-color: #2f3e51;
       padding: 20px 20px 0;
-      .group{
+      .group a {
+        color: #ffffff;
+      }
+      .group {
         margin-bottom: 40px;
-        .name{
+        &__name {
           font-size: 15px;
           margin-bottom: 5px;
         }
-        .message{
+        &__message {
           font-size: 11px;
         }
       }
@@ -113,7 +115,7 @@
           margin-bottom: 12px;
           display: flex;
           .user-name{
-            color: #ad2121;
+            color: #333333;
             font-size: 16px;
             font-weight: bold;
           }
