@@ -52,6 +52,7 @@
       padding: 20px 20px 0;
       .group a {
         color: #ffffff;
+        text-decoration: none;
       }
       .group {
         margin-bottom: 40px;
@@ -89,8 +90,10 @@
           font-size: 12px;
           display: flex;
           padding-right: 5px;
+          list-style: none;
           .member{
             padding-left: 5px;
+
           }
         }
       }
@@ -102,6 +105,10 @@
         color: #38aef0;
         border: solid 1px #38aef0;
         font-size: 16px;
+      }
+      a {
+        text-decoration: none;
+        color: #38aef0;
       }
     }
     .messages {

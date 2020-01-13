@@ -2,13 +2,15 @@
   .header
     .left-header
       .title
-        test
+        = @group.name
       .members
-        Member:
-        .member
-        masa
+        Member：
+        %li.__members__member
+          - @group.users.each do |user|
+            =user.name
     .right-header
-      Edit
+      = link_to edit_group_path(@group) do
+        Edit
   .messages
     = render @messages
   .form
