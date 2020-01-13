@@ -2,35 +2,24 @@
   .header
     .left-header
       .title
-        test
+        = @group.name
       .members
-        Member:
-        .member
-        masa
+        Member：
+        %li.__members__member
+          - @group.users.each do |user|
+            =user.name
     .right-header
-      Edit
+      = link_to edit_group_path(@group) do
+        Edit
   .messages
-    .message
-      .upper-message
-        .user-name
-          masa
-        .date
-          2019/11/20(Wed)17:43:01
-      .lower-message
-        おはよう！
-    .message
-      .upper-message
-        .user-name
-          masa
-        .date
-          2019/11/20(Wed)17:43:34
-      .lower-message
-        今日は朝から雨
+    = render @messages
   .form
-    .new-message
+    .new_message
       .input-box
-        %input{type: "text",class: "input-box__texts",placeholder:"type a message"}
-        %label{class: "input-box__image"}
-          = icon('far', 'image')
-          %input{type: "file",class: "input-box__image__file"}
-      %input{type: "submit",name: "commit",value: "Send",class: "submit-btn"}
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          .form-mask
+            = f.label :image, class: 'form-mask__image' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'form-mask__image__file'
+          = f.submit 'Send', class: 'submit-btn'
