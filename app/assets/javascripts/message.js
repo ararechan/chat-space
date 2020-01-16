@@ -1,5 +1,4 @@
 $(function(){ 
-  
   var buildHTML = function(message) {
     if (message.content && message.image) {
       var html = 
