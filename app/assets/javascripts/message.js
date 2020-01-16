@@ -100,10 +100,10 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   };
-  $(function() {
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
-  });
+  }
 });
